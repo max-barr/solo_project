@@ -1,0 +1,9 @@
+.form-holder {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(240, 237, 237);
+}
