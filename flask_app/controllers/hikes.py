@@ -45,9 +45,10 @@ def edit_hike(id):
     user_data = {
         "id" : session["user_id"]
     }
-    return render_template("edit_hike.html", user = User.get_by_id(user_data), edit = Hike.get_one(data))
+    hike = Hike.get_one(data)
+    return render_template("edit_hike.html", user = User.get_by_id(user_data), hike = hike)
 
-# Edit a hike POST request
+# Update a hike POST request
 @app.route("/update/hike/<int:id>", methods=["POST"])
 def update_hike(id):
     if 'user_id' not in session:
@@ -60,9 +61,9 @@ def update_hike(id):
         "date" : request.form["date"]
     }
     if not Hike.validate_hike(request.form):
-        return redirect("edit/hike/<int:id>")
-    Hike.save(data)
-    return redirect("/dashboard")
+        return redirect("/edit/hike/<int:id>")
+    Hike.update(data)
+    return redirect("/myhikes")
 
 # Display one hike GET request
 @app.route("/hike/<int:id>")
@@ -85,4 +86,4 @@ def destroy_hike(id):
         "id" : id
     }
     Hike.destroy(data)
-    return redirect("/dashboard")
+    return redirect("/myhikes")
