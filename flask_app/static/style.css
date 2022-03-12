@@ -1,4 +1,15 @@
-.form-holder {
+#img-container {
+    background-image: url("../static/hike_photo.JPG");
+    height: 800px;
+}
+
+#map-container {
+    margin: auto;
+    height: 405px;
+    width: 50%;
+}
+
+.login-form {
     display: inline-block;
     width: 45%;
     vertical-align: top;
@@ -6,4 +17,30 @@
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(240, 237, 237);
+    margin: 25px;
 }
+
+.form-container {
+    width: 50%;
+    margin: auto;
+    vertical-align: top;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(249, 244, 244);
+}
+
+.card {
+    border: 1px solid green;
+    background-color: rgb(249, 244, 244);
+}
+
+.card-header {
+    border-bottom: 1px solid green;
+    background-color: rgb(249, 244, 244);
+}
+
+
+
+
+
