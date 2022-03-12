@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <title>New Hike</title>
 </head>
 <body>
@@ -27,7 +28,37 @@
         </div>
     </nav>
     <div class="container">
-
+        <div class="form-container col-6">
+            <h1 style="text-align: center;">New Hike</h1>
+            <form action="/create/hike" method="POST">
+                <p>
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="title" id="title" class="form-control form-control-sm">
+                </p>
+                <p>
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" name="description" id="description" class="form-control form-control-sm">
+                </p>
+                <p>
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="location" id="location" class="form-control form-control-sm">
+                </p>
+                <p>
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" id="date" name="date" class="form-control">
+                </p>
+                <p>
+                    <input class="btn btn-success" type="submit" value="Let's Go!">
+                </p>
+            </form>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
     </div>
 </body>
 </html>
