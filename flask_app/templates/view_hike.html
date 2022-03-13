@@ -28,10 +28,10 @@
         </div>
     </nav>
     <div class="container">
-        <h1 style="text-align: center;">{{ hike.title }}</h1>
-        <p style="text-align: center;">{{ hike.description }}</p>
-        <p style="text-align: center;">Date: {{ hike.date.strftime('%A, %B %d, %Y') }}</p>
-        <p style="text-align: center;">Location: {{ hike.location }}</p>
+        <h1 class="center">{{ hike.title }}</h1>
+        <p class="center">{{ hike.description }}</p>
+        <p class="center">Date: {{ hike.date.strftime('%A, %B %d, %Y') }}</p>
+        <p class="center">Location: {{ hike.location }}</p>
         <div id="map-container">
             <iframe
                 width="550"
