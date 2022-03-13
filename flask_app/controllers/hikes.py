@@ -61,7 +61,7 @@ def update_hike(id):
         "date" : request.form["date"]
     }
     if not Hike.validate_hike(request.form):
-        return redirect("/edit/hike/<int:id>")
+        return redirect(f"/edit/hike/{id}")
     Hike.update(data)
     return redirect("/myhikes")
 
