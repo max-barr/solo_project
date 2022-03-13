@@ -33,6 +33,7 @@
 .card {
     border: 1px solid green;
     background-color: rgb(249, 244, 244);
+    margin-top: 10px;
 }
 
 .card-header {
