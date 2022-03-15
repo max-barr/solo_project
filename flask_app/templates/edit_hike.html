@@ -28,36 +28,38 @@
         </div>
     </nav>
     <div class="container">
-        <div class="form-container col-6">
-            <h1 class="center">Edit Your Hike</h1>
-            <form action="/update/hike/{{ hike.id }}" method="POST">
-                <p>
-                    <label for="title" class="form-label">Title</label>
-                    <input type="text" name="title" id="title" value="{{ hike.title }}" class="form-control form-control-sm">
-                </p>
-                <p>
-                    <label for="description" class="form-label">Description</label>
-                    <input type="text" name="description" id="description" value="{{ hike.description }}" class="form-control form-control-sm">
-                </p>
-                <p>
-                    <label for="location" class="form-label">Location</label>
-                    <input type="text" name="location" id="location" value="{{ hike.location }}" class="form-control form-control-sm">
-                </p>
-                <p>
-                    <label for="date" class="form-label">Date</label>
-                    <input type="date" id="date" name="date" value="{{ hike.date.strftime("%Y-%m-%d") }}" class="form-control">
-                </p>
-                <p>
-                    <input class="btn btn-success" type="submit" value="Update">
-                </p>
-            </form>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <p>{{message}}</p>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
+        <div id="img-container2">
+            <div class="form-container col-6">
+                <h1 class="center">Edit Your Hike</h1>
+                <form action="/update/hike/{{ hike.id }}" method="POST">
+                    <p>
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="title" id="title" value="{{ hike.title }}" class="form-control form-control-sm">
+                    </p>
+                    <p>
+                        <label for="description" class="form-label">Description</label>
+                        <input type="text" name="description" id="description" value="{{ hike.description }}" class="form-control form-control-sm">
+                    </p>
+                    <p>
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" name="location" id="location" value="{{ hike.location }}" class="form-control form-control-sm">
+                    </p>
+                    <p>
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" id="date" name="date" value="{{ hike.date.strftime("%Y-%m-%d") }}" class="form-control">
+                    </p>
+                    <p>
+                        <input class="btn btn-success" type="submit" value="Update">
+                    </p>
+                </form>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
         </div>
     </div>
 </body>
