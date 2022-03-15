@@ -1,8 +1,9 @@
 from crypt import methods
-from flask_app import app
+from flask_app import API_KEY, app
 from flask import render_template, request, redirect, session, flash
 from flask_app.models.hike import Hike
 from flask_app.models.user import User
+print(API_KEY)
 
 # ====ROUTES=====
 
@@ -75,7 +76,8 @@ def view_hike(id):
     }
     hike = Hike.get_one(data)
     print(hike)
-    return render_template("view_hike.html", hike = hike)
+    api = API_KEY
+    return render_template("view_hike.html", hike = hike, api = api)
 
 # Delete a hike GET request
 @app.route("/delete/hike/<int:id>")
