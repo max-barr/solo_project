@@ -28,11 +28,13 @@
         </div>
     </nav>
     <div class="container">
-        <h1 class="center">{{ hike.title }}</h1>
-        <p class="center">{{ hike.description }}</p>
-        <p class="center">Date: {{ hike.date.strftime('%A, %B %d, %Y') }}</p>
-        <p id="location" class="center">Location: {{ hike.location }}</p>
-        <div id="map"></div>
+        <div id="view-container">
+            <h1 class="center">{{ hike.title }}</h1>
+            <p class="center">{{ hike.description }}</p>
+            <p class="center">Date: {{ hike.date.strftime('%A, %B %d, %Y') }}</p>
+            <p id="location" class="center">Location: {{ hike.location }}</p>
+            <div id="map"></div>
+        </div>
     </div>
     <script>
         function initMap() {
