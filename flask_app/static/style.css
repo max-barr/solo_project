@@ -3,6 +3,16 @@
     height: 800px;
 }
 
+#img-container2 {
+    background-image: url("../static/hike_photo2.JPG");
+    height: 780px;
+}
+
+#img-container3 {
+    background-image: url("../static/hike_photo3.JPG");
+    height: 780px;
+}
+
 #map {
     margin: auto;
     height: 405px;
