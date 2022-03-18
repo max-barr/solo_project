@@ -1,6 +1,6 @@
 ## Take a Hike
 
-A simple CRUD app designed to inspire hikers and outdoor enthusiasts to make a plan and get outside. I designed this project during my training at Coding Dojo. I hope you enjoy.
+I designed this application to inspire hikers and outdoor enthusiasts to make a plan and get outside. I created this project during my web development training at Coding Dojo. I hope you enjoy.
 
 ## Technologies
 Project is created with:
@@ -15,4 +15,4 @@ Project is created with:
 * View all hikes created in the database
 * Users can view their personal hikes, which they can also update and delete
 * View planned hike locations on Google Maps
-
+* Passwords protected using bcrypt hashing
