@@ -3,7 +3,6 @@ from flask_app import API_KEY, app
 from flask import render_template, request, redirect, session, flash
 from flask_app.models.hike import Hike
 from flask_app.models.user import User
-print(API_KEY)
 
 # ====ROUTES=====
 
