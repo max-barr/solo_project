@@ -6,10 +6,9 @@ A simple CRUD app designed to inspire hikers and outdoor enthusiasts to make a p
 Project is created with:
 * Python 3
 * Flask
-* Bootstrap
+* Bootstrap 4.3.1
 * MySQL Workbench
 * Google Maps API
-* Bcrypt
 
 ## Features
 * Create a new hike
